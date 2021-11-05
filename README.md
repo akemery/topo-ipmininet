@@ -20,3 +20,19 @@ You can install frrouting if it is not install y following instructions at http:
 ```
 sudo python3 topo_uac.py
 ```
+
+## Commons errors
+
+If you have the following error messages:
+
+```
+*** No default OpenFlow controler found
+*** Falling back to OVS bridge
+```
+
+You can fix it with
+
+```
+sudo apt install openvswitch-testcontroller
+sudo ln -s /usr/bin/ovs-testcontroller /usr/bin/controller
+```
