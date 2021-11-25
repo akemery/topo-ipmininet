@@ -30,9 +30,23 @@ If you have the following error messages:
 *** Falling back to OVS bridge
 ```
 
+
 You can fix it with
 
 ```
 sudo apt install openvswitch-testcontroller
 sudo ln -s /usr/bin/ovs-testcontroller /usr/bin/controller
+```
+
+If you have the following error messages:
+
+```
+Exception: Please shutdown the controller which is running on port 6653 
+```
+
+You can fix it with:
+
+
+```
+sudo fuser -k 6653/tcp
 ```
